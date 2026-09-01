@@ -52,6 +52,89 @@
     revealEls.forEach(function (el) { el.classList.add("in-view"); });
   }
 
+  // Carrossel do hero (Home)
+  var heroSlides = document.querySelectorAll(".hero-slide");
+  var heroDots = document.querySelectorAll(".hero-dot");
+  if (heroSlides.length > 1) {
+    var heroIndex = 0;
+    var heroTimer = null;
+
+    var goToHeroSlide = function (index) {
+      heroSlides[heroIndex].classList.remove("is-active");
+      heroDots[heroIndex] && heroDots[heroIndex].classList.remove("is-active");
+      heroIndex = index;
+      heroSlides[heroIndex].classList.add("is-active");
+      heroDots[heroIndex] && heroDots[heroIndex].classList.add("is-active");
+    };
+
+    var startHeroTimer = function () {
+      clearInterval(heroTimer);
+      heroTimer = setInterval(function () {
+        goToHeroSlide((heroIndex + 1) % heroSlides.length);
+      }, 6000);
+    };
+
+    heroDots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () {
+        goToHeroSlide(i);
+        startHeroTimer();
+      });
+    });
+
+    startHeroTimer();
+  }
+
+  // Carrossel de depoimentos
+  var testimonialSlides = document.querySelectorAll(".testimonial-slide");
+  var testimonialDots = document.querySelectorAll(".testimonial-dot");
+  if (testimonialSlides.length > 1) {
+    var tIndex = 0;
+    var tTimer = null;
+
+    var goToTestimonial = function (index) {
+      testimonialSlides[tIndex].classList.remove("is-active");
+      testimonialDots[tIndex] && testimonialDots[tIndex].classList.remove("is-active");
+      tIndex = index;
+      testimonialSlides[tIndex].classList.add("is-active");
+      testimonialDots[tIndex] && testimonialDots[tIndex].classList.add("is-active");
+    };
+
+    var startTestimonialTimer = function () {
+      clearInterval(tTimer);
+      tTimer = setInterval(function () {
+        goToTestimonial((tIndex + 1) % testimonialSlides.length);
+      }, 5000);
+    };
+
+    testimonialDots.forEach(function (dot, i) {
+      dot.addEventListener("click", function () {
+        goToTestimonial(i);
+        startTestimonialTimer();
+      });
+    });
+
+    startTestimonialTimer();
+  }
+
+  // FAQ (acordeão)
+  var faqItems = document.querySelectorAll(".faq-item");
+  faqItems.forEach(function (item) {
+    var question = item.querySelector(".faq-question");
+    var answer = item.querySelector(".faq-answer");
+    question.addEventListener("click", function () {
+      var isOpen = item.classList.contains("is-open");
+      if (isOpen) {
+        answer.style.maxHeight = "0px";
+        item.classList.remove("is-open");
+        question.setAttribute("aria-expanded", "false");
+      } else {
+        answer.style.maxHeight = answer.scrollHeight + "px";
+        item.classList.add("is-open");
+        question.setAttribute("aria-expanded", "true");
+      }
+    });
+  });
+
   // Contador animado (estatísticas)
   var counters = document.querySelectorAll(".stat-number[data-count]");
   if (counters.length && "IntersectionObserver" in window) {

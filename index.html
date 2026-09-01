@@ -20,10 +20,9 @@
     </a>
 
     <nav class="main-nav" id="main-nav">
+      <a href="#top">Home</a>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
-      <a href="#atendimento">Atendimento</a>
-      <a href="#unidades">Unidades</a>
       <a href="#contato">Contato</a>
     </nav>
 
@@ -37,22 +36,30 @@
 
 <main id="top">
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
-    <div class="container hero-inner reveal">
-      <p class="eyebrow">Funilaria &amp; Pintura · São José - SC</p>
-      <h1>Seu carro em boas mãos.<br>Do primeiro contato à última<br>demão de tinta.</h1>
-      <p class="hero-sub">
-        A Rush Car Soluções Automotivas une precisão técnica e atendimento transparente
-        para devolver o seu veículo pronto — no prazo, com garantia e com um perito
-        acompanhando cada etapa do reparo. Duas unidades em São José, prontas para
-        atender você.
-      </p>
-      <div class="hero-actions">
-        <a href="#unidades" class="btn btn-accent">Escolher minha unidade</a>
-        <a href="#servicos" class="btn btn-ghost">Conhecer serviços</a>
+  <!-- ===== HERO CAROUSEL ===== -->
+  <section class="hero-carousel" id="hero-carousel">
+    <div class="hero-slide is-active" data-slide="kobrasol">
+      <div class="hero-slide-bg hero-slide-bg--kobrasol" style="background-image:url('assets/img/hero-kobrasol.jpg')"></div>
+      <div class="container hero-slide-inner">
+        <p class="eyebrow">Unidade Kobrasol · Matriz</p>
+        <h1>Seu carro em<br>boas mãos.</h1>
+        <p class="hero-sub">Funilaria, pintura e reparo de sinistros em São José - SC. Atendimento para clientes particulares e seguradoras.</p>
+        <a href="https://wa.me/5548991043983?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20agendamento%20na%20unidade%20Kobrasol." class="btn btn-accent" target="_blank" rel="noopener">Solicitar agendamento</a>
       </div>
+    </div>
+    <div class="hero-slide" data-slide="barreiros">
+      <div class="hero-slide-bg hero-slide-bg--barreiros" style="background-image:url('assets/img/hero-barreiros.jpg')"></div>
+      <div class="container hero-slide-inner">
+        <p class="eyebrow">Unidade Barreiros · Filial</p>
+        <h1>Rush Car também<br>em Barreiros.</h1>
+        <p class="hero-sub">A mesma qualidade e cuidado em funilaria e pintura, mais perto de você.</p>
+        <a href="#unidades" class="btn btn-accent">Solicitar agendamento</a>
+      </div>
+    </div>
+
+    <div class="hero-dots" id="hero-dots">
+      <button class="hero-dot is-active" data-slide-index="0" aria-label="Ver unidade Kobrasol"></button>
+      <button class="hero-dot" data-slide-index="1" aria-label="Ver unidade Barreiros"></button>
     </div>
   </section>
 
@@ -74,11 +81,11 @@
     </div>
   </section>
 
-  <!-- ===== SOBRE ===== -->
+  <!-- ===== QUEM SOMOS ===== -->
   <section id="sobre" class="section">
     <div class="container split reveal">
       <div class="split-text">
-        <p class="eyebrow">Sobre a Rush Car</p>
+        <p class="eyebrow">Quem somos</p>
         <h2>Uma oficina pensada para<br>quem não pode esperar.</h2>
         <p class="lead">
           A Rush Car Soluções Automotivas é uma oficina especializada em funilaria e pintura,
@@ -142,8 +149,34 @@
     </div>
   </section>
 
+  <!-- ===== SEGURADORAS & ASSOCIAÇÕES (loop) ===== -->
+  <section class="section section-partners">
+    <div class="container reveal">
+      <p class="eyebrow center">Quem confia na Rush Car</p>
+      <h2 class="center">Seguradoras e associações que atendemos</h2>
+    </div>
+    <div class="marquee" aria-hidden="false">
+      <div class="marquee-track" id="marquee-track">
+        <span class="marquee-item marquee-placeholder">Seguradora parceira</span>
+        <span class="marquee-item marquee-placeholder">Seguradora parceira</span>
+        <span class="marquee-item marquee-placeholder">Associação parceira</span>
+        <span class="marquee-item marquee-placeholder">Seguradora parceira</span>
+        <span class="marquee-item marquee-placeholder">Associação parceira</span>
+        <span class="marquee-item marquee-placeholder">Seguradora parceira</span>
+        <!-- duplicado para loop contínuo -->
+        <span class="marquee-item marquee-placeholder" aria-hidden="true">Seguradora parceira</span>
+        <span class="marquee-item marquee-placeholder" aria-hidden="true">Seguradora parceira</span>
+        <span class="marquee-item marquee-placeholder" aria-hidden="true">Associação parceira</span>
+        <span class="marquee-item marquee-placeholder" aria-hidden="true">Seguradora parceira</span>
+        <span class="marquee-item marquee-placeholder" aria-hidden="true">Associação parceira</span>
+        <span class="marquee-item marquee-placeholder" aria-hidden="true">Seguradora parceira</span>
+      </div>
+    </div>
+    <p class="marquee-note container">Lista de seguradoras e associações em atualização.</p>
+  </section>
+
   <!-- ===== COMO ATENDEMOS ===== -->
-  <section id="atendimento" class="section">
+  <section class="section">
     <div class="container split reverse reveal">
       <div class="split-text">
         <p class="eyebrow">Cliente particular</p>
@@ -194,61 +227,149 @@
     </div>
   </section>
 
-  <!-- ===== UNIDADES ===== -->
-  <section id="unidades" class="section section-alt">
+  <!-- ===== DEPOIMENTOS ===== -->
+  <section class="section section-alt">
     <div class="container reveal">
-      <p class="eyebrow center">Onde estamos</p>
-      <h2 class="center">Escolha sua unidade</h2>
-      <p class="lead center max-w">
-        Cada unidade tem endereço, horário, recepção e perito próprios. Escolha a mais
-        perto de você para ver todos os detalhes e falar direto com a equipe.
-      </p>
+      <p class="eyebrow center">O que dizem sobre nós</p>
+      <h2 class="center">Avaliações no Google</h2>
 
-      <div class="cards-grid units-grid">
-        <article class="card unit-card">
-          <h3>Kobrasol <span class="unit-tag">Matriz</span></h3>
-          <p>R. Lídio Antônio de Matos, 162 — Kobrasol, São José - SC, 88102-460</p>
-          <p class="unit-hours">Seg. a sex., 08h–12h e 13h30–18h · Sáb. e dom. fechado</p>
-          <a href="unidades/kobrasol.html" class="btn btn-accent unit-btn">Ver unidade Kobrasol</a>
-        </article>
-        <article class="card unit-card">
-          <h3>Barreiros <span class="unit-tag">Filial</span></h3>
-          <p>Av. Leoberto Leal, 250 — Barreiros, São José - SC, 88117-000</p>
-          <p class="unit-hours">Seg. a sex., 08h–12h e 13h30–18h · Sáb. e dom. fechado</p>
-          <span class="btn btn-ghost unit-btn unit-btn-disabled">Página em breve</span>
-        </article>
+      <div class="testimonial-carousel" id="testimonial-carousel">
+        <div class="testimonial-slide is-active">
+          <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+          <p class="testimonial-quote">Espaço reservado para uma avaliação real do Google. Assim que você enviar os depoimentos, eles entram aqui.</p>
+          <p class="testimonial-author">Aguardando avaliação real</p>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+          <p class="testimonial-quote">Espaço reservado para uma avaliação real do Google. Assim que você enviar os depoimentos, eles entram aqui.</p>
+          <p class="testimonial-author">Aguardando avaliação real</p>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial-stars" aria-hidden="true">★★★★★</div>
+          <p class="testimonial-quote">Espaço reservado para uma avaliação real do Google. Assim que você enviar os depoimentos, eles entram aqui.</p>
+          <p class="testimonial-author">Aguardando avaliação real</p>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonial-dots">
+        <button class="testimonial-dot is-active" data-testimonial-index="0" aria-label="Avaliação 1"></button>
+        <button class="testimonial-dot" data-testimonial-index="1" aria-label="Avaliação 2"></button>
+        <button class="testimonial-dot" data-testimonial-index="2" aria-label="Avaliação 3"></button>
       </div>
     </div>
   </section>
 
-  <!-- ===== CONTATO ===== -->
-  <section id="contato" class="section">
+  <!-- ===== FAQ ===== -->
+  <section id="faq" class="section">
     <div class="container reveal">
-      <p class="eyebrow center">Fale com a gente</p>
-      <h2 class="center">Contato</h2>
-      <p class="lead center max-w">
-        O jeito mais rápido de falar com a gente é escolher sua unidade acima —
-        lá você encontra o WhatsApp direto da recepção e do perito responsável.
-      </p>
+      <p class="eyebrow center">Dúvidas frequentes</p>
+      <h2 class="center">Perguntas e respostas</h2>
 
-      <div class="contact-grid contact-grid-narrow">
-        <div class="contact-card">
-          <h3>Kobrasol (Matriz)</h3>
-          <p class="contact-desc">R. Lídio Antônio de Matos, 162 — Kobrasol, São José - SC</p>
-          <a class="contact-link" href="unidades/kobrasol.html">Ver contato completo →</a>
-        </div>
-        <div class="contact-card">
-          <h3>Barreiros (Filial)</h3>
-          <p class="contact-desc">Av. Leoberto Leal, 250 — Barreiros, São José - SC</p>
-          <p class="contact-desc">Página da unidade em breve.</p>
-        </div>
-        <div class="contact-card">
-          <h3>E-mail e redes</h3>
-          <a class="contact-link" href="mailto:contato@rushcar.com.br">contato@rushcar.com.br</a>
-          <div class="social-row">
-            <a href="https://www.instagram.com/rushsolucoesautomotivas/" target="_blank" rel="noopener">@rushsolucoesautomotivas</a>
+      <div class="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Como funciona o orçamento?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Você fala com a recepção da unidade mais próxima, o veículo é avaliado e um orçamento é apresentado antes de qualquer serviço começar. Nada é feito sem sua aprovação.</p>
           </div>
         </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Vocês atendem sinistros de seguradora?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim. Cada unidade tem um perito responsável que cuida da vistoria, do laudo técnico e da comunicação direta com o corretor ou a seguradora durante todo o reparo.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Quanto tempo demora um reparo?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>O prazo varia conforme a extensão do dano e a disponibilidade de peças. A recepção informa uma previsão de entrega já no orçamento e mantém você atualizado durante o processo.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Preciso agendar horário para levar o carro?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Recomendamos falar antes com a recepção da unidade pelo WhatsApp para organizar a avaliação — assim evitamos espera e já adiantamos informações sobre o serviço.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Os serviços têm garantia?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sim, os serviços realizados na Rush Car contam com garantia. As condições específicas são informadas junto com o orçamento.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false">
+            Qual unidade eu devo escolher?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Escolha a unidade mais próxima de você — Kobrasol (matriz) ou Barreiros (filial). Ambas seguem o mesmo padrão de atendimento e qualidade.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LOCALIZAÇÃO ===== -->
+  <section id="unidades" class="section section-alt">
+    <div class="container reveal">
+      <p class="eyebrow center">Onde estamos</p>
+      <h2 class="center">Nossas unidades</h2>
+      <p class="lead center max-w">
+        Cada unidade tem endereço, horário e recepção próprios. Escolha a mais
+        perto de você.
+      </p>
+
+      <div class="locations-grid">
+        <article class="location-card">
+          <h3>Kobrasol <span class="unit-tag">Matriz</span></h3>
+          <p class="location-address">R. Lídio Antônio de Matos, 162 — Kobrasol, São José - SC, 88102-460</p>
+          <p class="unit-hours">Seg. a sex., 08h–12h e 13h30–18h · Sáb. e dom. fechado</p>
+          <a class="contact-link" href="https://wa.me/5548991043983?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rush%20Car%20(Kobrasol)." target="_blank" rel="noopener">WhatsApp recepção: (48) 9 9104-3983</a>
+          <div class="map-embed">
+            <iframe
+              title="Mapa — Rush Car Kobrasol"
+              src="https://www.google.com/maps?q=R.+L%C3%ADdio+Ant%C3%B4nio+de+Matos%2C+162+-+Kobrasol%2C+S%C3%A3o+Jos%C3%A9+-+SC%2C+88102-460&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <a href="unidades/kobrasol.html" class="btn btn-accent unit-btn">Ver unidade completa</a>
+        </article>
+
+        <article class="location-card">
+          <h3>Barreiros <span class="unit-tag">Filial</span></h3>
+          <p class="location-address">Av. Leoberto Leal, 250 — Barreiros, São José - SC, 88117-000</p>
+          <p class="unit-hours">Seg. a sex., 08h–12h e 13h30–18h · Sáb. e dom. fechado</p>
+          <p class="contact-link contact-link-disabled">WhatsApp recepção: em breve</p>
+          <div class="map-embed">
+            <iframe
+              title="Mapa — Rush Car Barreiros"
+              src="https://www.google.com/maps?q=Av.+Leoberto+Leal%2C+250+-+Barreiros%2C+S%C3%A3o+Jos%C3%A9+-+SC%2C+88117-000&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+          <span class="btn btn-ghost unit-btn unit-btn-disabled">Página em breve</span>
+        </article>
       </div>
     </div>
   </section>
@@ -256,22 +377,38 @@
 </main>
 
 <!-- ===== FOOTER ===== -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
+<footer class="site-footer" id="contato">
+  <div class="container footer-grid">
+    <div class="footer-col footer-brand-col">
       <span class="logo-mark">RUSH</span><span class="logo-sub">CAR</span>
       <p>Soluções Automotivas</p>
     </div>
-    <nav class="footer-nav">
+
+    <div class="footer-col">
+      <h4>Links</h4>
+      <a href="#top">Home</a>
       <a href="#sobre">Sobre</a>
       <a href="#servicos">Serviços</a>
-      <a href="#atendimento">Atendimento</a>
+      <a href="#faq">FAQ</a>
       <a href="#unidades">Unidades</a>
-      <a href="#contato">Contato</a>
-    </nav>
+    </div>
+
+    <div class="footer-col">
+      <h4>Redes sociais</h4>
+      <a href="https://www.instagram.com/rushsolucoesautomotivas/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <a href="mailto:contato@rushcar.com.br">contato@rushcar.com.br</a>
+      <a href="https://wa.me/5548991043983" target="_blank" rel="noopener">WhatsApp Kobrasol</a>
+      <a href="tel:+554830581756">(48) 3058-1756</a>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
     <p class="footer-legal">
-      Rush Car Soluções Automotivas<br>
-      Kobrasol (Matriz) CNPJ 45.916.827/0001-88<br>
+      Rush Car Soluções Automotivas · Kobrasol (Matriz) CNPJ 45.916.827/0001-88<br>
       &copy; <span id="year"></span> Rush Car. Todos os direitos reservados.
     </p>
   </div>
