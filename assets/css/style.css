@@ -581,25 +581,21 @@ h2.center { text-align: center; }
 .marquee-item {
   display: inline-flex;
   align-items: center;
-  white-space: nowrap;
-  color: rgba(255, 255, 255, 0.55);
-  font-weight: 600;
-  font-size: 0.9rem;
-  padding: 12px 24px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 980px;
+  justify-content: center;
+  flex: 0 0 auto;
+  height: 64px;
+  padding: 0 26px;
+  background: var(--white);
+  border-radius: 14px;
 }
 .marquee-item img {
-  height: 28px;
+  height: 34px;
   width: auto;
+  max-width: 150px;
   object-fit: contain;
 }
-.marquee-item-assoc {
-  color: rgba(255, 255, 255, 0.35);
-  font-size: 0.82rem;
-  padding: 10px 20px;
-  border-color: rgba(255, 255, 255, 0.1);
-}
+/* Logos monocromáticos claros (feitos para fundo escuro): invertidos para leitura no chip branco */
+.marquee-item-invert img { filter: invert(1); }
 .marquee-note {
   text-align: center;
   color: rgba(255, 255, 255, 0.4);
