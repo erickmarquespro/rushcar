@@ -594,6 +594,12 @@ h2.center { text-align: center; }
   width: auto;
   object-fit: contain;
 }
+.marquee-item-assoc {
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.82rem;
+  padding: 10px 20px;
+  border-color: rgba(255, 255, 255, 0.1);
+}
 .marquee-note {
   text-align: center;
   color: rgba(255, 255, 255, 0.4);
