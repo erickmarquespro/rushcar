@@ -590,6 +590,31 @@ h2.center { text-align: center; }
   text-align: center;
 }
 .testimonial-slide.is-active { display: block; }
+.testimonial-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--black);
+  font-weight: 800;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.testimonial-name {
+  font-weight: 700;
+  color: var(--gray-900);
+  font-size: 0.95rem;
+}
 .testimonial-stars {
   color: var(--accent);
   font-size: 1.3rem;
@@ -630,6 +655,17 @@ h2.center { text-align: center; }
   width: 22px;
   border-radius: 5px;
 }
+.testimonial-note {
+  text-align: center;
+  margin: 28px 0 0;
+}
+.testimonial-note a {
+  color: var(--accent-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+.testimonial-note a:hover { text-decoration: underline; }
 
 /* ===== FAQ ===== */
 .faq-list {
