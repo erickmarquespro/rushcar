@@ -765,17 +765,46 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   width: 22px;
   border-radius: 5px;
 }
-.testimonial-note {
-  text-align: center;
-  margin: 28px 0 0;
+.rating-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 24px 0 40px;
 }
-.testimonial-note a {
-  color: var(--accent-dark);
-  font-weight: 600;
+.rating-stars {
+  color: var(--accent);
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+}
+.rating-score {
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--gray-900);
+}
+.rating-count {
+  color: var(--gray-600);
   font-size: 0.9rem;
-  text-decoration: none;
 }
-.testimonial-note a:hover { text-decoration: underline; }
+.rating-count::before {
+  content: "·";
+  margin-right: 10px;
+  color: var(--gray-300);
+}
+
+.testimonial-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: 32px 0 0;
+}
+.testimonial-buttons .btn {
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  font-size: 0.82rem;
+}
 
 /* ===== FAQ ===== */
 .faq-list {
