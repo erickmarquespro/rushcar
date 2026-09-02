@@ -864,6 +864,14 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   border-radius: var(--radius);
   padding: 32px;
 }
+.location-brand {
+  color: var(--gray-600);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0 0 6px;
+}
 .location-card h3 {
   display: flex;
   align-items: center;
@@ -891,8 +899,24 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   font-size: 0.9rem;
   margin: 0 0 20px;
 }
+.location-card .contact-link-disabled { display: block; }
 .location-card .map-embed { margin: 0 0 20px; }
 .location-card .map-embed iframe { height: 220px; }
+
+.unsure-block {
+  text-align: center;
+  max-width: 480px;
+  margin: 56px auto 0;
+}
+.unsure-block h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+  margin: 0 0 10px;
+}
+.unsure-block p {
+  color: var(--gray-600);
+  margin: 0 0 24px;
+}
 
 /* ===== Footer (new grid layout, Home) ===== */
 .footer-grid {
