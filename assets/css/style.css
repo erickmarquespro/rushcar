@@ -574,6 +574,38 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   justify-content: center;
   padding-top: 76px;
 }
+.hero-rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 0 0 14px;
+}
+.hero-rating-stars {
+  color: var(--accent);
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+.hero-rating-score {
+  color: var(--white);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+.hero-rating-count {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+}
+.hero-rating-count::before {
+  content: "·";
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.35);
+}
+.hero-rating-line {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 20px;
+}
 .hero-content h1 {
   color: var(--white);
   font-size: clamp(2.2rem, 4.6vw, 3.8rem);
@@ -646,7 +678,6 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   animation: marquee-scroll 64s linear infinite;
   will-change: transform;
 }
-.marquee:hover .marquee-track { animation-play-state: paused; }
 @keyframes marquee-scroll {
   from { transform: translate3d(0, 0, 0); }
   to   { transform: translate3d(-50%, 0, 0); }
@@ -858,6 +889,8 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   margin-top: 56px;
 }
 .location-card {
+  display: flex;
+  flex-direction: column;
   background: var(--white);
   border: 1px solid var(--gray-300);
   border-radius: var(--radius);
@@ -1039,6 +1072,7 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   grid-template-columns: 1fr 1fr;
   gap: 24px;
 }
+.audience-grid-3 { grid-template-columns: repeat(3, 1fr); }
 .audience-card {
   padding: 44px;
   border-radius: var(--radius);
@@ -1146,7 +1180,7 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
 }
 
 .contact-grid-narrow { grid-template-columns: repeat(3, 1fr); }
-.unit-btn { margin-top: 20px; display: inline-block; }
+.unit-btn { margin-top: auto; align-self: flex-start; }
 .unit-btn-disabled {
   cursor: default;
   opacity: 0.55;
@@ -1177,6 +1211,7 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   .contact-grid-narrow { grid-template-columns: 1fr; }
   .info-strip { grid-template-columns: 1fr; }
   .locations-grid { grid-template-columns: 1fr; }
+  .audience-grid-3 { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
   .footer-grid-5 { grid-template-columns: 1fr 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
