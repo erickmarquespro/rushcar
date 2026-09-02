@@ -1006,6 +1006,18 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 76px; }
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.6);
 }
+.footer-logo {
+  height: 72px;
+  width: auto;
+  display: block;
+}
+.footer-brand-col .footer-brand-tagline {
+  margin: 10px 0 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: var(--white);
+}
 .footer-brand-col a {
   margin-top: 12px;
 }
