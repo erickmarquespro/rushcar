@@ -386,6 +386,13 @@ h2.center { text-align: center; }
   border-radius: 980px;
   font-size: 0.95rem;
 }
+.visual-card-photo .visual-badge {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  z-index: 1;
+}
+.visual-card-photo img { object-position: center 75%; }
 
 /* ===== Cards grid ===== */
 .cards-grid {
