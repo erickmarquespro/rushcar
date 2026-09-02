@@ -1375,7 +1375,7 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 76px; }
   background: repeating-linear-gradient(45deg, #fafafa, #fafafa 10px, #f2f2f2 10px, #f2f2f2 20px);
 }
 .review-card.is-placeholder .q { font-style: italic; color: var(--gray-600); }
-.ureviews-foot { text-align: center; }
+.ureviews-foot { text-align: center; margin-top: 32px; }
 .ureviews-rating { font-weight: 700; margin-bottom: 14px; }
 
 .cta-final { background: var(--black); color: #fff; text-align: center; padding: 72px 0; }
