@@ -186,7 +186,6 @@ img { max-width: 100%; display: block; }
   background-size: cover;
   background-position: center;
   background-image:
-    var(--photo-url, none),
     radial-gradient(60% 50% at 80% 20%, rgba(255, 140, 26, 0.25), transparent 60%),
     radial-gradient(50% 40% at 10% 80%, rgba(255, 140, 26, 0.12), transparent 60%);
   background-color: var(--black);
@@ -560,10 +559,10 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   background: linear-gradient(100deg, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.25) 100%);
 }
 .hero-slide-bg--kobrasol {
-  background-image: var(--photo-url, none), linear-gradient(135deg, #0a0a0a 0%, #241100 55%, #7a3d00 100%);
+  background-image: linear-gradient(135deg, #0a0a0a 0%, #241100 55%, #7a3d00 100%);
 }
 .hero-slide-bg--barreiros {
-  background-image: var(--photo-url, none), linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 55%, #4a2900 100%);
+  background-image: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 55%, #4a2900 100%);
 }
 
 .hero-content {
@@ -925,10 +924,14 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   gap: 32px;
   padding: 56px 0 32px;
 }
+.footer-grid-5 { grid-template-columns: 1.1fr repeat(4, 1fr); }
 .footer-brand-col p {
   margin: 8px 0 0;
   font-size: 0.85rem;
   color: rgba(255, 255, 255, 0.6);
+}
+.footer-brand-col a {
+  margin-top: 12px;
 }
 .footer-col h4 {
   color: var(--white);
@@ -946,9 +949,22 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   margin-bottom: 10px;
 }
 .footer-col a:hover { color: var(--accent); }
+.footer-text {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.88rem;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+.footer-text-disabled { color: rgba(255, 255, 255, 0.32); }
 .footer-bottom {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 24px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
 }
 .footer-bottom .footer-legal {
   margin: 0;
@@ -956,6 +972,45 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   font-size: 0.78rem;
   color: rgba(255, 255, 255, 0.45);
 }
+.footer-legal-links {
+  display: flex;
+  gap: 20px;
+}
+.footer-legal-links a {
+  color: rgba(255, 255, 255, 0.55);
+  text-decoration: none;
+  font-size: 0.78rem;
+}
+.footer-legal-links a:hover { color: var(--accent); }
+
+/* ===== Legal pages ===== */
+.legal-page { padding-top: 156px; }
+.legal-page h1 {
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 8px;
+}
+.legal-updated {
+  color: var(--gray-600);
+  font-size: 0.88rem;
+  margin: 0 0 40px;
+}
+.legal-content {
+  max-width: 720px;
+}
+.legal-content h2 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin: 36px 0 12px;
+}
+.legal-content p {
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin: 0 0 4px;
+}
+.legal-content a { color: var(--accent-dark); }
+.legal-back { margin-top: 48px; display: inline-block; }
 
 /* ===== Photo gallery (Nossa estrutura) ===== */
 .gallery-grid {
@@ -1123,6 +1178,7 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   .info-strip { grid-template-columns: 1fr; }
   .locations-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-grid-5 { grid-template-columns: 1fr 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
   .gallery-grid-4 { grid-template-columns: repeat(2, 1fr); grid-auto-rows: unset; }
   .positioning-grid { grid-template-columns: repeat(2, 1fr); }
@@ -1138,6 +1194,8 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   .contact-grid { grid-template-columns: 1fr; }
   .section { padding: 80px 0; }
   .footer-grid { grid-template-columns: 1fr; }
+  .footer-grid-5 { grid-template-columns: 1fr; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
   .marquee-item { width: 182px; height: 104px; margin-right: 16px; padding: 0 14px; }
   .marquee-item img { max-height: 78px; max-width: 154px; }
   .gallery-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 130px; }
