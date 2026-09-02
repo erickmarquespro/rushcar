@@ -74,7 +74,7 @@ img { max-width: 100%; display: block; }
   transition: height 0.25s var(--ease);
 }
 .site-header.is-scrolled .header-inner { height: 54px; }
-.site-header.is-scrolled .logo-img { height: 40px; }
+.site-header.is-scrolled .logo-img { height: 44px; }
 
 .logo {
   display: flex;
@@ -88,9 +88,8 @@ img { max-width: 100%; display: block; }
 .logo-mark { color: var(--accent); font-size: 1.25rem; }
 .logo-sub { color: var(--white); font-size: 1.25rem; }
 .logo-img {
-  height: 44px;
+  height: 54px;
   width: auto;
-  border-radius: 10px;
   display: block;
   transition: height 0.25s var(--ease);
 }
