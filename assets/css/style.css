@@ -310,6 +310,20 @@ h2 {
   text-wrap: balance;
 }
 h2.center { text-align: center; }
+.services-headline {
+  text-transform: uppercase;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.services-cta {
+  text-align: center;
+  margin-top: 48px;
+}
+.services-cta .btn {
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
 
 .lead {
   font-size: 1.1rem;
