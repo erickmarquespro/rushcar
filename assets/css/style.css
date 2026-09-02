@@ -629,7 +629,8 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 88px; }
   overflow: hidden;
 }
 .section-partners .eyebrow { color: var(--accent); }
-.section-partners h2 { color: var(--white); margin-bottom: 0; }
+.section-partners h2 { color: var(--white); }
+.section-partners .lead { color: rgba(255, 255, 255, 0.7); margin-bottom: 0; }
 
 .marquee {
   position: relative;
