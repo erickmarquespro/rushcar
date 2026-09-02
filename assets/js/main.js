@@ -21,14 +21,10 @@
     });
   }
 
-  // Header com sombra ao rolar
+  // Header com sombra ao rolar (vidro líquido)
   var header = document.getElementById("header");
   var onScroll = function () {
-    if (window.scrollY > 8) {
-      header.style.boxShadow = "0 8px 24px rgba(0,0,0,0.25)";
-    } else {
-      header.style.boxShadow = "none";
-    }
+    header.classList.toggle("is-scrolled", window.scrollY > 8);
   };
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
