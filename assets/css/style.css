@@ -991,7 +991,8 @@ main section[id], .hero-carousel[id] { scroll-margin-top: 76px; }
   display: grid;
   grid-template-columns: 1.2fr repeat(3, 1fr);
   gap: 32px;
-  padding: 56px 0 32px;
+  padding-top: 56px;
+  padding-bottom: 32px;
 }
 .footer-grid-5 { grid-template-columns: 1.1fr repeat(4, 1fr); }
 .footer-brand-col p {
