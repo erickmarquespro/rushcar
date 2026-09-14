@@ -12,7 +12,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/favicon-192.png">
 <link rel="apple-touch-icon" href="assets/img/favicon/apple-touch-icon.png">
 
-<link rel="preload" as="image" href="assets/img/kobrasol-exterior-2.jpg" fetchpriority="high">
+<link rel="preload" as="image" href="assets/img/kobrasol-02.jpg" fetchpriority="high">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Rush Car Soluções Automotivas">
@@ -33,6 +33,22 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "Organization",
+      "@id": "https://rushsolucoesautomotivas.com.br/#org",
+      "name": "Rush Car Soluções Automotivas",
+      "url": "https://rushsolucoesautomotivas.com.br/",
+      "logo": "https://rushsolucoesautomotivas.com.br/assets/img/logo-rush.png",
+      "sameAs": ["https://www.instagram.com/rushsolucoesautomotivas/"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rushsolucoesautomotivas.com.br/#website",
+      "url": "https://rushsolucoesautomotivas.com.br/",
+      "name": "Rush Car Soluções Automotivas",
+      "inLanguage": "pt-BR",
+      "publisher": { "@id": "https://rushsolucoesautomotivas.com.br/#org" }
+    },
+    {
       "@type": "AutoRepair",
       "@id": "https://rushsolucoesautomotivas.com.br/#kobrasol",
       "name": "Rush Car Soluções Automotivas — Kobrasol (Matriz)",
@@ -40,6 +56,7 @@
       "image": "https://rushsolucoesautomotivas.com.br/assets/img/og-image.jpg",
       "telephone": "+554830581756",
       "priceRange": "$$",
+      "parentOrganization": { "@id": "https://rushsolucoesautomotivas.com.br/#org" },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "R. Lídio Antônio de Matos, 162 — Kobrasol",
@@ -48,6 +65,8 @@
         "postalCode": "88102-460",
         "addressCountry": "BR"
       },
+      "geo": { "@type": "GeoCoordinates", "latitude": "-27.5987513", "longitude": "-48.6192281" },
+      "hasMap": "https://www.google.com/maps?q=R.+L%C3%ADdio+Ant%C3%B4nio+de+Matos%2C+162+-+Kobrasol%2C+S%C3%A3o+Jos%C3%A9+-+SC%2C+88102-460",
       "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "12:00" },
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "13:30", "closes": "18:00" }
@@ -70,6 +89,7 @@
       "url": "https://rushsolucoesautomotivas.com.br/barreiros",
       "image": "https://rushsolucoesautomotivas.com.br/assets/img/og-image.jpg",
       "priceRange": "$$",
+      "parentOrganization": { "@id": "https://rushsolucoesautomotivas.com.br/#org" },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Av. Leoberto Leal, 250 — Barreiros",
@@ -79,6 +99,7 @@
         "addressCountry": "BR"
       },
       "geo": { "@type": "GeoCoordinates", "latitude": "-27.5658885", "longitude": "-48.6127535" },
+      "hasMap": "https://www.google.com/maps?q=Av.+Leoberto+Leal%2C+250+-+Barreiros%2C+S%C3%A3o+Jos%C3%A9+-+SC%2C+88117-000",
       "openingHoursSpecification": [
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "12:00" },
         { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "13:30", "closes": "18:00" }
@@ -130,10 +151,10 @@
   <!-- ===== HERO ===== -->
   <section class="hero-carousel" id="hero-carousel">
     <div class="hero-slide is-active" data-slide="0">
-      <div class="hero-slide-bg hero-slide-bg--kobrasol" style="background-image:url('assets/img/kobrasol-exterior-2.jpg'), linear-gradient(135deg, #0a0a0a 0%, #241100 55%, #7a3d00 100%)"></div>
+      <div class="hero-slide-bg hero-slide-bg--kobrasol" style="background-image:url('assets/img/kobrasol-02.jpg'), linear-gradient(135deg, #0a0a0a 0%, #241100 55%, #7a3d00 100%)"></div>
     </div>
     <div class="hero-slide" data-slide="1">
-      <div class="hero-slide-bg hero-slide-bg--barreiros" style="background-image:url('assets/img/barreiros-exterior.jpg'), linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 55%, #4a2900 100%)"></div>
+      <div class="hero-slide-bg hero-slide-bg--barreiros" style="background-image:url('assets/img/header-02.jpg'), linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 55%, #4a2900 100%)"></div>
     </div>
 
     <div class="container hero-content reveal">
@@ -473,8 +494,8 @@
           <h3>Barreiros <span class="unit-tag">Filial</span></h3>
           <p class="location-address">Av. Leoberto Leal, 250 — Barreiros, São José - SC, 88117-000</p>
           <p class="unit-hours">Seg. a sex., 08h–12h e 13h30–18h · Sáb. e dom. fechado</p>
-          <p class="contact-link contact-link-disabled">WhatsApp recepção: em breve</p>
-          <p class="contact-link contact-link-disabled">Telefone recepção: em breve</p>
+          <a class="contact-link" href="https://wa.me/5548991099302?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Rush%20Car%20(Barreiros)." target="_blank" rel="noopener">WhatsApp recepção: (48) 9 9109-9302</a>
+          <a class="contact-link" href="tel:+554830948697">Telefone recepção: (48) 3094-8697</a>
           <div class="map-embed">
             <iframe
               title="Mapa — Rush Car Barreiros"
@@ -597,8 +618,8 @@
     <div class="footer-col">
       <h4>Unidade Barreiros</h4>
       <span class="footer-text">Av. Leoberto Leal, 250 — Barreiros, São José - SC</span>
-      <span class="footer-text footer-text-disabled">Telefone: em breve</span>
-      <span class="footer-text footer-text-disabled">WhatsApp: em breve</span>
+      <a href="tel:+554830948697">(48) 3094-8697</a>
+      <a href="https://wa.me/5548991099302" target="_blank" rel="noopener">WhatsApp Barreiros</a>
     </div>
 
     <div class="footer-col">
